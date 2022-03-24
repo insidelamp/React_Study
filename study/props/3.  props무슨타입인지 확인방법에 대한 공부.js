@@ -40,6 +40,7 @@ Btn.propTypes = {
 };
 
 /*
+npm i prop-types  로 프롭타입을 설치해줄수있다
 
 import PropTypes from "prop-types";
 임포트로 프롭타입스를 해주고 연결해준다면
