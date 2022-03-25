@@ -17,6 +17,9 @@ function Hello() {
       console.log("bye :(");
     };
   }, []);
+
+  //위 방식이 밑의 방식보다 쉽다
+
   useEffect(() => {
     console.log("hi :)");
     return () => console.log("bye :(");
@@ -75,6 +78,7 @@ showing 일때는 <Hello/> 를 보여주고 아닐떄는 null을 보여준다
 위  const [showing, setShowing] = useState(false); 이 부분에서 현재 상태를 false로 정하였기떄문에
 Show를 먼저 보여주게 되고 Show버튼을 클릭하게되면  <Hello/> 의 값과 Hide의 버튼이 보여지게된다
 
+위 방식이 잘 사용하지는 않으나 알고는 있어라 라고함
 
 
 
