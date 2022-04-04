@@ -1,7 +1,7 @@
 const getCookie = (name) => {
   let value = "; " + document.cookie;
 
-  let parts = value.split(`; ${name}=`); // [aa=xx ; user_id =aaa; abbb=ssss;]  이 상태라면 [aa=xx] 와 [user_id =aaa] 2개로 짤라짐
+  let parts = value.split(`; ${name}=`); // [aa=xx ; user_id =aaa; user_pwd=ssss;]  이 상태라면 [aa=xx] 와 [user_id =aaa ;] 2개로 짤라짐
   // 위 상태는 [aa=xx ; user_id =aaa; abbb=ssss;] 여기에서 세미클론뒤에 붙은 use_id 를 가져오는 줄이며
   //값은 [aaa; abbb=ssss;]  이다
   // 만약 let b = part.pop() 일경우 b의 값은 [aaa; abbb=ssss;] 이다
