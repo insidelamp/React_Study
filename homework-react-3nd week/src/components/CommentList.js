@@ -6,11 +6,6 @@ const CommentList = () => {
     <React.Fragment>
       <Grid padding="16px">
         <CommentItem />
-        <CommentItem />
-        <CommentItem />
-        <CommentItem />
-        <CommentItem />
-        <CommentItem />
       </Grid>
     </React.Fragment>
   );

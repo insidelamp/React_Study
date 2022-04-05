@@ -17,7 +17,7 @@ const getCookie = (name) => {
 const setCookie = (name, value, exp = 5) => {
   let date = new Date(); //날짜 만드는곳
   date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000); //만료일날짜 만드는 라인 (저장)* 24(시간)*60(분)*60(초)*1000(밀리초)
-  document.cookie = `${name}=${value};expires=${date.toUTCString()}`; //이름, 입력값 , 만료일
+  document.cookie = `${name}=${value}; expires=${date.toUTCString()}`; //이름, 입력값 , 만료일
 };
 
 const deleteCookie = (name) => {

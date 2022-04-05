@@ -13,8 +13,6 @@ const Login = (props) => {
   const [pwd, setPwd] = React.useState("");
 
   const login = () => {
-    console.log(id);
-
     if (id === "" || pwd === "") {
       window.alert("아이디 혹은 비밀번호가 공란입니다! 입력해주세요!");
       return;

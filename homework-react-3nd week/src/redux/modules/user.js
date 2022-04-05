@@ -41,7 +41,6 @@ const loginFB = (id, pwd) => {
       auth
         .signInWithEmailAndPassword(id, pwd)
         .then((user) => {
-          console.log(user);
           dispatch(
             setUser({
               user_name: user.user.displayName,
@@ -55,8 +54,6 @@ const loginFB = (id, pwd) => {
         .catch((error) => {
           var errorCode = error.code;
           var errorMessage = error.message;
-
-          console.log(errorCode, errorMessage);
         });
     });
   };
@@ -69,7 +66,7 @@ const signupFB = (id, pwd, user_name) => {
       .then((user) => {
         // Signed in
         // ...
-        console.log(user);
+
         auth.currentUser
           .updateProfile({
             displayName: user_name,
@@ -85,9 +82,7 @@ const signupFB = (id, pwd, user_name) => {
             );
             history.push("/");
           })
-          .catch((error) => {
-            console.log(error);
-          });
+          .catch((error) => {});
       })
       .catch((error) => {
         const errorCode = error.code;
